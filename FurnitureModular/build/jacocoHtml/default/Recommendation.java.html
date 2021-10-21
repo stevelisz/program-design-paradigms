@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Recommendation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Recommendation.java</span></div><h1>Recommendation.java</h1><pre class="source lang-java linenums">import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Objects;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+/**
+ * This class turns criteria into actual item and amount.
+ */
+public class Recommendation {
+
+  private static final int FEET_TWO = 2;
+  private static final int FEET_THREE = 3;
+  private static final int NO_NEED_FOR_WALL_FIXTURE = 0;
+
+  private static final int UNIVERSAL_WIDTH = 36;
+<span class="fc" id="L18">  private static final String[] sizes = {&quot;WARDROBE&quot;, &quot;HALF&quot;, &quot;QUARTER&quot;};</span>
+<span class="fc" id="L19">  private static final String[] options = {&quot;Option 1&quot;, &quot;Option 2&quot;, &quot;Option3&quot;};</span>
+<span class="fc" id="L20">  private static final Integer[] heights = {72, 36, 18};</span>
+  private int desiredWidth;
+  private int desiredHeight;
+  private int desiredShelfAmount;
+  private int desiredDrawerAmount;
+  private String desiredColor;
+  private Mounting desiredMounting;
+  private Boolean budgetPriority;
+
+  /**
+   * Constructor that has following properties.
+   *
+   * @param desiredWidth        customer's desired width.
+   * @param desiredHeight       customer's desired height.
+   * @param desiredShelfAmount  customer's desired shelf amount.
+   * @param desiredDrawerAmount customer's desired drawer amount.
+   * @param desiredColor        customer's desired color.
+   * @param desiredMounting     customer's desired mounting type.
+   * @param budgetPriority      customer's desired budget priority.
+   */
+  public Recommendation(int desiredWidth, int desiredHeight, int desiredShelfAmount,
+      int desiredDrawerAmount, String desiredColor, Mounting desiredMounting,
+<span class="fc" id="L42">      Boolean budgetPriority) {</span>
+<span class="fc" id="L43">    this.desiredWidth = desiredWidth;</span>
+<span class="fc" id="L44">    this.desiredHeight = desiredHeight;</span>
+<span class="fc" id="L45">    this.desiredShelfAmount = desiredShelfAmount;</span>
+<span class="fc" id="L46">    this.desiredDrawerAmount = desiredDrawerAmount;</span>
+<span class="fc" id="L47">    this.desiredColor = desiredColor;</span>
+<span class="fc" id="L48">    this.desiredMounting = desiredMounting;</span>
+<span class="fc" id="L49">    this.budgetPriority = budgetPriority;</span>
+<span class="fc" id="L50">  }</span>
+
+  /**
+   * get all the door types given sizes.
+   *
+   * @return a list.
+   */
+  public ArrayList&lt;String&gt; getDoorType() {
+<span class="fc" id="L58">    ArrayList&lt;String&gt; lst = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L59">    String size = this.getSize();</span>
+<span class="fc" id="L60">    Slothrop slothrop = new Slothrop(size);</span>
+<span class="fc" id="L61">    Belacqua belacqua = new Belacqua(size);</span>
+<span class="fc" id="L62">    GagaDoor gagaDoor = new GagaDoor(size);</span>
+<span class="fc" id="L63">    GagaDrawerFront gagaDrawerFront = new GagaDrawerFront(size);</span>
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">    if (slothrop.getColors().contains(desiredColor)) {</span>
+<span class="fc" id="L65">      lst.add(&quot;Slothrop&quot;);</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">    } else if (belacqua.getColors().contains(desiredColor)) {</span>
+<span class="nc" id="L67">      lst.add(&quot;Belacqua&quot;);</span>
+    }
+
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">    if (gagaDoor.getColors().contains(desiredColor)) {</span>
+<span class="fc" id="L71">      lst.add(&quot;GagaDoor&quot;);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">    } else if (gagaDrawerFront.getColors().contains(desiredColor)) {</span>
+<span class="nc" id="L73">      lst.add(&quot;gagaDrawerFront&quot;);</span>
+    }
+
+<span class="fc" id="L76">    return lst;</span>
+  }
+
+  /**
+   * get mounting types base on size.
+   *
+   * @return mounting type as String.
+   */
+  public String getMountingType() {
+<span class="fc" id="L85">    String result = &quot;&quot;;</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">    if (this.getSize().equals(&quot;WARDROBE&quot;)) {</span>
+<span class="nc" id="L87">      result = &quot;Floor&quot;;</span>
+
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">    } else if (desiredMounting == Mounting.floor) {</span>
+<span class="nc" id="L90">      result = &quot;Floor&quot;;</span>
+
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">    } else if (desiredMounting == Mounting.wall) {</span>
+<span class="nc" id="L93">      result = &quot;Wall&quot;;</span>
+<span class="pc bpc" id="L94" title="1 of 2 branches missed.">    } else if (desiredMounting == Mounting.floorOrWall) {</span>
+<span class="fc" id="L95">      result = &quot;Floor or Wall&quot;;</span>
+    }
+<span class="fc" id="L97">    return result;</span>
+  }
+
+  /**
+   * get rail type.
+   *
+   * @param str given cabinet type.
+   * @return String.
+   */
+  public String getRailType(String str) {
+<span class="fc bfc" id="L107" title="All 2 branches covered.">    if (str.equals(&quot;Atreides&quot;)) {</span>
+<span class="fc" id="L108">      return &quot;Atreides&quot;;</span>
+    } else {
+<span class="fc" id="L110">      return &quot;Standard&quot;;</span>
+    }
+  }
+
+  /**
+   * get wall fixture amount.
+   *
+   * @param str given type.
+   * @return corresponding wall fixture amount.
+   */
+  public int getWallFixtureAmount(String str) {
+<span class="pc bpc" id="L121" title="1 of 4 branches missed.">    if (str.equals(&quot;Yossarian&quot;) &amp;&amp; this.getSize().equals(&quot;WARDROBE&quot;)) {</span>
+<span class="nc" id="L122">      return this.getCabAmount();</span>
+    } else {
+<span class="fc" id="L124">      return NO_NEED_FOR_WALL_FIXTURE;</span>
+    }
+  }
+
+  /**
+   * get the size of a door.
+   *
+   * @return the size as String.
+   */
+  public String getDoorSize() {
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">    if (this.getSize().equals(&quot;WARDROBE&quot;)) {</span>
+<span class="nc" id="L135">      return &quot;WARDROBE&quot;;</span>
+<span class="pc bpc" id="L136" title="1 of 2 branches missed.">    } else if (this.getSize().equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L137">      return &quot;HALF&quot;;</span>
+<span class="nc bnc" id="L138" title="All 2 branches missed.">    } else if (this.getSize().equals(&quot;QUARTER&quot;)) {</span>
+<span class="nc" id="L139">      return &quot;QUARTER&quot;;</span>
+    } else {
+<span class="nc" id="L141">      return &quot;WRONG SIZES&quot;;</span>
+    }
+  }
+
+  /**
+   * write json file.
+   */
+  public void addInfo() {
+<span class="fc" id="L149">    ArrayList&lt;String&gt; lst = this.getType();</span>
+<span class="fc" id="L150">    JSONArray finalResult = new JSONArray();</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">    for (String str : lst) {</span>
+<span class="fc" id="L152">      finalResult.add(this.createJSON(str));</span>
+<span class="fc" id="L153">    }</span>
+
+<span class="fc" id="L155">    try (FileWriter file = new FileWriter(&quot;final.json&quot;)) {</span>
+
+<span class="fc" id="L157">      file.write(finalResult.toJSONString());</span>
+<span class="fc" id="L158">      file.flush();</span>
+
+<span class="nc" id="L160">    } catch (IOException e) {</span>
+<span class="nc" id="L161">      e.printStackTrace();</span>
+<span class="fc" id="L162">    }</span>
+<span class="fc" id="L163">  }</span>
+
+  /**
+   * create JSON object to write.
+   *
+   * @param str cabinet type.
+   * @return JSON array.
+   */
+  public JSONArray createJSON(String str) {
+<span class="fc" id="L172">    JSONObject ops = new JSONObject();</span>
+<span class="fc" id="L173">    JSONObject ops1 = new JSONObject();</span>
+<span class="fc" id="L174">    JSONObject ops2 = new JSONObject();</span>
+<span class="fc" id="L175">    JSONArray jsonArray = new JSONArray();</span>
+<span class="fc" id="L176">    String[] types = {&quot;Yossarian&quot;, &quot;Luthien&quot;, &quot;Atreides&quot;};</span>
+<span class="fc" id="L177">    ArrayList&lt;String&gt; doorTypes = this.getDoorType();</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">    if (str.equals(types[0])) {</span>
+<span class="fc" id="L179">      JSONObject options = new JSONObject();</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">      for (String s : doorTypes) {</span>
+<span class="fc" id="L181">        JSONObject temp = new JSONObject();</span>
+<span class="fc" id="L182">        temp.put(&quot;Cabinet Type&quot;, types[0]);</span>
+<span class="fc" id="L183">        temp.put(&quot;Cabinet size&quot;, this.getSize());</span>
+<span class="fc" id="L184">        temp.put(&quot;Cabinet Amount&quot;, this.getCabAmount());</span>
+<span class="fc" id="L185">        temp.put(&quot;Wall Fixture Amount&quot;, this.getWallFixtureAmount(str));</span>
+<span class="fc" id="L186">        temp.put(&quot;Cabinet Mounting Type&quot;, this.getMountingType());</span>
+<span class="fc" id="L187">        temp.put(&quot;Cabinet Feet Amount&quot;, this.getFeetAmount());</span>
+<span class="fc" id="L188">        temp.put(&quot;OR&quot;, &quot;&quot;);</span>
+<span class="fc" id="L189">        temp.put(&quot;Cabinet Rail Type&quot;, this.getRailType(str));</span>
+<span class="fc" id="L190">        temp.put(&quot;Cabinet Rails Amount&quot;, this.getCabAmount());</span>
+<span class="fc" id="L191">        temp.put(&quot;Door Information&quot;, &quot;Necessary Modular for Cabinets&quot;);</span>
+<span class="fc" id="L192">        temp.put(&quot;Door Type&quot;, s);</span>
+<span class="fc" id="L193">        temp.put(&quot;Door Size&quot;, this.getDoorSize());</span>
+<span class="fc" id="L194">        temp.put(&quot;Door Amount&quot;, this.getDoorAmount());</span>
+<span class="fc" id="L195">        temp.put(&quot;Door Hinges&quot;, this.getDoorAmount());</span>
+<span class="fc" id="L196">        temp.put(&quot;Door Handles Amount&quot;, this.getDoorHandles(s));</span>
+<span class="pc bpc" id="L197" title="1 of 2 branches missed.">        if (this.getSize().equals(&quot;QUARTER&quot;)) {</span>
+<span class="nc" id="L198">          temp.put(&quot;18” Drawers Amount&quot;, this.getCabAmount());</span>
+        }
+<span class="fc" id="L200">        temp.put(&quot;Drawer Handles Amount&quot;, this.getCabAmount());</span>
+
+<span class="fc" id="L202">        options.put(types[0], temp);</span>
+<span class="fc" id="L203">        jsonArray.add(options);</span>
+
+<span class="fc" id="L205">      }</span>
+
+<span class="pc bpc" id="L207" title="1 of 2 branches missed.">    } else if (str.equals(types[1])) {</span>
+<span class="fc" id="L208">      JSONObject options1 = new JSONObject();</span>
+<span class="fc bfc" id="L209" title="All 2 branches covered.">      for (String s : doorTypes) {</span>
+<span class="fc" id="L210">        JSONObject temp = new JSONObject();</span>
+<span class="fc" id="L211">        temp.put(&quot;Cabinet Type&quot;, types[1]);</span>
+<span class="fc" id="L212">        temp.put(&quot;Cabinet size&quot;, this.getSize());</span>
+<span class="fc" id="L213">        temp.put(&quot;Cabinet Amount&quot;, this.getCabAmount());</span>
+<span class="fc" id="L214">        temp.put(&quot;Wall Fixture Amount&quot;, this.getWallFixtureAmount(str));</span>
+<span class="fc" id="L215">        temp.put(&quot;Cabinet Mounting Type&quot;, this.getMountingType());</span>
+<span class="fc" id="L216">        temp.put(&quot;Cabinet Feet Amount&quot;, this.getFeetAmount());</span>
+<span class="fc" id="L217">        temp.put(&quot;OR&quot;, &quot;&quot;);</span>
+<span class="fc" id="L218">        temp.put(&quot;Cabinet Rail Type&quot;, this.getRailType(str));</span>
+<span class="fc" id="L219">        temp.put(&quot;Cabinet Rails Amount&quot;, this.getCabAmount());</span>
+<span class="fc" id="L220">        temp.put(&quot;Door Information&quot;, &quot;Necessary Modular for Cabinets&quot;);</span>
+<span class="fc" id="L221">        temp.put(&quot;Door Type&quot;, s);</span>
+<span class="fc" id="L222">        temp.put(&quot;Door Size&quot;, this.getDoorSize());</span>
+<span class="fc" id="L223">        temp.put(&quot;Door Amount&quot;, this.getDoorAmount());</span>
+<span class="fc" id="L224">        temp.put(&quot;Door Hinges&quot;, this.getDoorAmount());</span>
+<span class="fc" id="L225">        temp.put(&quot;Door Handles Amount&quot;, this.getDoorHandles(s));</span>
+<span class="pc bpc" id="L226" title="1 of 2 branches missed.">        if (this.getSize().equals(&quot;QUARTER&quot;)) {</span>
+<span class="nc" id="L227">          temp.put(&quot;18” Drawers Amount&quot;, this.getCabAmount());</span>
+        }
+<span class="fc" id="L229">        temp.put(&quot;Drawer Handles Amount&quot;, this.getCabAmount());</span>
+
+<span class="fc" id="L231">        options1.put(types[1], temp);</span>
+<span class="fc" id="L232">        jsonArray.add(options1);</span>
+
+<span class="fc" id="L234">      }</span>
+
+<span class="pc bnc" id="L236" title="All 2 branches missed.">    } else if (str.equals(types[2])) {</span>
+<span class="nc" id="L237">      JSONObject options2 = new JSONObject();</span>
+<span class="nc bnc" id="L238" title="All 2 branches missed.">      for (String s : doorTypes) {</span>
+<span class="nc" id="L239">        JSONObject temp = new JSONObject();</span>
+<span class="nc" id="L240">        temp.put(&quot;Cabinet Type&quot;, types[2]);</span>
+<span class="nc" id="L241">        temp.put(&quot;Cabinet size&quot;, this.getSize());</span>
+<span class="nc" id="L242">        temp.put(&quot;Cabinet Amount&quot;, this.getCabAmount());</span>
+<span class="nc" id="L243">        temp.put(&quot;Wall Fixture Amount&quot;, this.getWallFixtureAmount(str));</span>
+<span class="nc" id="L244">        temp.put(&quot;Cabinet Mounting Type&quot;, this.getMountingType());</span>
+<span class="nc" id="L245">        temp.put(&quot;Cabinet Feet Amount&quot;, this.getFeetAmount());</span>
+<span class="nc" id="L246">        temp.put(&quot;OR&quot;, &quot;&quot;);</span>
+<span class="nc" id="L247">        temp.put(&quot;Cabinet Rail Type&quot;, this.getRailType(str));</span>
+<span class="nc" id="L248">        temp.put(&quot;Cabinet Rails Amount&quot;, this.getCabAmount());</span>
+<span class="nc" id="L249">        temp.put(&quot;Door Information&quot;, &quot;Necessary Modular for Cabinets&quot;);</span>
+<span class="nc" id="L250">        temp.put(&quot;Door Type&quot;, s);</span>
+<span class="nc" id="L251">        temp.put(&quot;Door Size&quot;, this.getDoorSize());</span>
+<span class="nc" id="L252">        temp.put(&quot;Door Amount&quot;, this.getDoorAmount());</span>
+<span class="nc" id="L253">        temp.put(&quot;Door Hinges&quot;, this.getDoorAmount());</span>
+<span class="nc" id="L254">        temp.put(&quot;Door Handles Amount&quot;, this.getDoorHandles(s));</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">        if (this.getSize().equals(&quot;QUARTER&quot;)) {</span>
+<span class="nc" id="L256">          temp.put(&quot;18” Drawers Amount&quot;, this.getCabAmount());</span>
+        }
+<span class="nc" id="L258">        temp.put(&quot;Drawer Handles Amount&quot;, this.getCabAmount());</span>
+
+<span class="nc" id="L260">        options2.put(types[2], temp);</span>
+<span class="nc" id="L261">        jsonArray.add(options2);</span>
+<span class="nc" id="L262">      }</span>
+
+
+    }
+
+<span class="fc" id="L267">    return jsonArray;</span>
+
+
+  }
+
+  /**
+   * get the size based on desired height.
+   * @return sizes.
+   */
+  public String getSize() {
+<span class="fc" id="L277">    String size = null;</span>
+<span class="pc bpc" id="L278" title="1 of 2 branches missed.">    if (desiredHeight == heights[0]) {</span>
+<span class="nc" id="L279">      size = sizes[0];</span>
+<span class="pc bpc" id="L280" title="1 of 2 branches missed.">    } else if (desiredHeight == heights[1]) {</span>
+<span class="fc" id="L281">      size = sizes[1];</span>
+<span class="nc bnc" id="L282" title="All 2 branches missed.">    } else if (desiredHeight == heights[2]) {</span>
+<span class="nc" id="L283">      size = sizes[2];</span>
+    }
+<span class="fc" id="L285">    return size;</span>
+  }
+
+  /**
+   * get cabinet type.
+   * @return a list of proper cabinet type.
+   */
+  public ArrayList&lt;String&gt; getType() {
+
+<span class="fc" id="L294">    String size = this.getSize();</span>
+<span class="fc" id="L295">    Yossarian yossarian = new Yossarian(size);</span>
+<span class="fc" id="L296">    Luthien luthien = new Luthien(size);</span>
+<span class="fc" id="L297">    Atreides atreides = new Atreides(size);</span>
+<span class="fc" id="L298">    ArrayList&lt;String&gt; lst = new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L299" title="1 of 2 branches missed.">    if (checkShelfAndDrawer(yossarian) &amp;&amp; yossarian</span>
+<span class="pc bpc" id="L300" title="1 of 2 branches missed.">        .getColors().contains(desiredColor)) {</span>
+<span class="fc" id="L301">      lst.add(yossarian.getTypeName());</span>
+    }
+<span class="pc bpc" id="L303" title="1 of 2 branches missed.">    if (checkShelfAndDrawer(luthien) &amp;&amp; luthien</span>
+<span class="pc bpc" id="L304" title="1 of 2 branches missed.">        .getColors().contains(desiredColor)) {</span>
+<span class="fc" id="L305">      lst.add(luthien.getTypeName());</span>
+    }
+<span class="pc bpc" id="L307" title="1 of 2 branches missed.">    if (checkShelfAndDrawer(atreides) &amp;&amp; atreides</span>
+<span class="pc bpc" id="L308" title="1 of 2 branches missed.">        .getColors().contains(desiredColor)) {</span>
+<span class="nc" id="L309">      lst.add(atreides.getTypeName());</span>
+    }
+
+<span class="fc" id="L312">    return lst;</span>
+
+  }
+
+  /**
+   * compare desired shelf and drawer amount to real world.
+   * @param cabinet any concrete class object that extended cabinet.
+   * @return true if satisfied, false otherwise.
+   */
+  public Boolean checkShelfAndDrawer(Cabinet cabinet) {
+
+<span class="fc" id="L323">    int cabAmount = this.getCabAmount();</span>
+<span class="pc bpc" id="L324" title="1 of 2 branches missed.">    if (desiredDrawerAmount &lt;= cabAmount * cabinet.getDrawerAmount()</span>
+<span class="pc bpc" id="L325" title="1 of 2 branches missed.">        &amp;&amp; desiredShelfAmount &lt;= cabinet.getShelfAmount()) {</span>
+<span class="fc" id="L326">      return true;</span>
+    } else {
+<span class="nc" id="L328">      return false;</span>
+    }
+
+  }
+
+  /**
+   * get the amount of cabinets base on desired width.
+   * @return amount.
+   */
+  public int getCabAmount() {
+<span class="fc" id="L338">    int desiredWidth = this.desiredWidth;</span>
+<span class="fc" id="L339">    return desiredWidth / UNIVERSAL_WIDTH;</span>
+  }
+
+  /**
+   * get the size of cabinets based on desired height.
+   * @return cabinet sizes.
+   */
+  public String getCabSize() {
+<span class="fc" id="L347">    int desiredHeight = this.desiredHeight;</span>
+<span class="pc bpc" id="L348" title="1 of 2 branches missed.">    if (desiredHeight == 72) {</span>
+<span class="nc" id="L349">      return &quot;WARDROBE&quot;;</span>
+<span class="pc bpc" id="L350" title="1 of 2 branches missed.">    } else if (desiredHeight == 36) {</span>
+<span class="fc" id="L351">      return &quot;HALF&quot;;</span>
+    } else {
+<span class="nc" id="L353">      return &quot;QUARTER&quot;;</span>
+    }
+  }
+
+  /**
+   * get door amount.
+   * @return door amount.
+   */
+  public int getDoorAmount() {
+<span class="fc" id="L362">    return this.getCabAmount();</span>
+  }
+
+  /**
+   * get set of hinges.
+   * @return amount.
+   */
+  public int getHingesAmount() {
+<span class="fc" id="L370">    return this.getDoorAmount();</span>
+  }
+
+  /**
+   * get amount of handles.
+   * @param s given type
+   * @return 0 if included. door amount if not.
+   */
+  public int getDoorHandles(String s) {
+<span class="pc bpc" id="L379" title="1 of 4 branches missed.">    if (s.equals(&quot;Slothrop&quot;) || s.equals(&quot;Belacqua&quot;)) {</span>
+<span class="fc" id="L380">      return 0;</span>
+    } else {
+<span class="fc" id="L382">      return this.getDoorAmount();</span>
+    }
+  }
+
+  /**
+   * get the feet amount of cabinets.
+   * @return amount.
+   */
+  public int getFeetAmount() {
+<span class="fc" id="L391">    int result = 0;</span>
+<span class="pc bpc" id="L392" title="1 of 2 branches missed.">    if (this.getCabSize().equals(&quot;WARDROBE&quot;)) {</span>
+<span class="nc" id="L393">      return result;</span>
+<span class="pc bpc" id="L394" title="1 of 2 branches missed.">    } else if (this.getCabAmount() % 2 == 0) {</span>
+<span class="nc" id="L395">      result = this.getCabAmount() + FEET_TWO;</span>
+<span class="pc bpc" id="L396" title="1 of 2 branches missed.">    } else if (this.getCabAmount() % 2 != 0) {</span>
+<span class="fc" id="L397">      result = this.getCabAmount() + FEET_THREE;</span>
+    }
+<span class="fc" id="L399">    return result;</span>
+  }
+
+  @Override
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L404" title="1 of 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L405">      return true;</span>
+    }
+<span class="pc bpc" id="L407" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L408">      return false;</span>
+    }
+<span class="fc" id="L410">    Recommendation that = (Recommendation) o;</span>
+<span class="pc bpc" id="L411" title="4 of 8 branches missed.">    return desiredWidth == that.desiredWidth &amp;&amp;</span>
+        desiredHeight == that.desiredHeight &amp;&amp;
+        desiredShelfAmount == that.desiredShelfAmount &amp;&amp;
+        desiredDrawerAmount == that.desiredDrawerAmount &amp;&amp;
+<span class="pc bpc" id="L415" title="2 of 4 branches missed.">        Objects.equals(desiredColor, that.desiredColor) &amp;&amp;</span>
+        desiredMounting == that.desiredMounting &amp;&amp;
+<span class="pc bpc" id="L417" title="1 of 2 branches missed.">        Objects.equals(budgetPriority, that.budgetPriority);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L422">    return Objects</span>
+<span class="fc" id="L423">        .hash(desiredWidth, desiredHeight, desiredShelfAmount, desiredDrawerAmount, desiredColor,</span>
+            desiredMounting, budgetPriority);
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L429">    return &quot;Recommendation{&quot; +</span>
+        &quot;desiredWidth=&quot; + desiredWidth +
+        &quot;, desiredHeight=&quot; + desiredHeight +
+        &quot;, desiredShelfAmount=&quot; + desiredShelfAmount +
+        &quot;, desiredDrawerAmount=&quot; + desiredDrawerAmount +
+        &quot;, desiredColor='&quot; + desiredColor + '\'' +
+        &quot;, desiredMounting=&quot; + desiredMounting +
+        &quot;, budgetPriority=&quot; + budgetPriority +
+        '}';
+  }
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

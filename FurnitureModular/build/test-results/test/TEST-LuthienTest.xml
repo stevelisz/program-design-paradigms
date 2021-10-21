@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LuthienTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.006">
+  <properties/>
+  <testcase name="getDimension" classname="LuthienTest" time="0.0"/>
+  <testcase name="testToString" classname="LuthienTest" time="0.0"/>
+  <testcase name="getShelfAmount" classname="LuthienTest" time="0.0"/>
+  <testcase name="getFeet" classname="LuthienTest" time="0.0"/>
+  <testcase name="getRail" classname="LuthienTest" time="0.0"/>
+  <testcase name="getSize" classname="LuthienTest" time="0.001"/>
+  <testcase name="setColors" classname="LuthienTest" time="0.0"/>
+  <testcase name="getColors" classname="LuthienTest" time="0.0"/>
+  <testcase name="setDimension" classname="LuthienTest" time="0.0"/>
+  <testcase name="getDrawerAmount" classname="LuthienTest" time="0.0"/>
+  <testcase name="testHashCode" classname="LuthienTest" time="0.0"/>
+  <testcase name="testEquals" classname="LuthienTest" time="0.0"/>
+  <testcase name="getTypeName" classname="LuthienTest" time="0.0"/>
+  <testcase name="setDrawerAmount" classname="LuthienTest" time="0.0"/>
+  <testcase name="setShelfAmount" classname="LuthienTest" time="0.0"/>
+  <testcase name="setMounting" classname="LuthienTest" time="0.0"/>
+  <testcase name="getMounting" classname="LuthienTest" time="0.0"/>
+  <testcase name="setFeet" classname="LuthienTest" time="0.0"/>
+  <testcase name="setSize" classname="LuthienTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

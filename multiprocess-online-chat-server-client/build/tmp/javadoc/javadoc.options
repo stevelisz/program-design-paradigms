@@ -1,0 +1,15 @@
+-classpath '/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/build/classes/java/main:/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/build/resources/main'
+-d '/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/build/docs/javadoc'
+-doctitle 'assignment6 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'assignment6 1.0-SNAPSHOT API'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/ClientPath.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/ServerProtocol.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/CloseUtil.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/Server.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Client.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Send.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/ClientProtocol.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Receive.java'
+'/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/CloseUtil.java'

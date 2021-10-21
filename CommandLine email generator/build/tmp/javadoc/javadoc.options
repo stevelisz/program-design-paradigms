@@ -1,0 +1,7 @@
+-classpath '/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/build/classes/java/main:/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/build/resources/main:/Users/Steve/gradle-6.1/caches/modules-2/files-2.1/org.apache.commons/commons-csv/1.8/37ca9a9aa2d4be2599e55506a6d3170dd7a3df4/commons-csv-1.8.jar:/Users/Steve/gradle-6.1/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/c51c00206bb913cd8612b24abd9fa98ae89719b1/commons-cli-1.4.jar'
+-d '/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/build/docs/javadoc'
+-doctitle 'assignment3 1.0-SNAPSHOT API'
+-quiet 
+-windowtitle 'assignment3 1.0-SNAPSHOT API'
+'/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/src/main/java/CSVGetter.java'
+'/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/src/main/java/Main.java'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GagaDoorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:41" hostname="Steves-Macbook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="testCor" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="getDimension" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="testToString" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="setHandleIncluded" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="getSize" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="setColors" classname="GagaDoorTest" time="0.001"/>
+  <testcase name="getColors" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="setDimension" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="getHandleIncluded" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="testHashCode" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="testEquals" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="getTypeName" classname="GagaDoorTest" time="0.0"/>
+  <testcase name="setSize" classname="GagaDoorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

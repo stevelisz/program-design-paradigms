@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Generator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment3</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Generator.java</span></div><h1>Generator.java</h1><pre class="source lang-java linenums">import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Array;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+
+/**
+ * This class represents Generator object and its functions.
+ */
+public class Generator {
+
+  /**
+   * Simple constructor that constructs the object.
+   */
+<span class="fc" id="L27">  public Generator() {</span>
+<span class="fc" id="L28">  }</span>
+
+  /**
+   * Replace the place holder in the template with the info provided in CSV file and output them
+   * in a chosen directory.
+   * @param templateName Name of a template.
+   * @param csvFileName Name of a CSV file.
+   * @param outputDir Path of a directory.
+   * @throws IOException if file not found etc.,
+   */
+  public void generate(String templateName, String csvFileName, String outputDir) throws IOException {
+
+<span class="fc" id="L40">    TemplateGetter templateGetter = new TemplateGetter();</span>
+<span class="fc" id="L41">    CSVGetter csvGetter = new CSVGetter();</span>
+<span class="fc" id="L42">    HashMap&lt;String, ArrayList&lt;String&gt;&gt; csvInfo = csvGetter.readCSV(csvFileName);</span>
+<span class="fc" id="L43">    String template = templateGetter.getTemplate(templateName);</span>
+
+<span class="fc" id="L45">    ArrayList&lt;String&gt; lst = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">    for (HashMap.Entry&lt;String, ArrayList&lt;String&gt;&gt; entry : csvInfo.entrySet()) {</span>
+      String replaced;
+
+<span class="fc" id="L49">      replaced = template.replaceAll(java.util.regex.Pattern.quote(&quot;[[email]]&quot;), entry.getKey());</span>
+<span class="fc" id="L50">      replaced = replaced</span>
+<span class="fc" id="L51">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[first_name]]&quot;), entry.getValue().get(0));</span>
+<span class="fc" id="L52">      replaced = replaced</span>
+<span class="fc" id="L53">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[last_name]]&quot;), entry.getValue().get(1));</span>
+<span class="fc" id="L54">      replaced = replaced</span>
+<span class="fc" id="L55">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[company_name]]&quot;), entry.getValue().get(2));</span>
+<span class="fc" id="L56">      replaced = replaced</span>
+<span class="fc" id="L57">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[address]]&quot;), entry.getValue().get(3));</span>
+<span class="fc" id="L58">      replaced = replaced</span>
+<span class="fc" id="L59">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[city]]&quot;), entry.getValue().get(4));</span>
+<span class="fc" id="L60">      replaced = replaced</span>
+<span class="fc" id="L61">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[county]]&quot;), entry.getValue().get(5));</span>
+<span class="fc" id="L62">      replaced = replaced</span>
+<span class="fc" id="L63">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[state]]&quot;), entry.getValue().get(6));</span>
+<span class="fc" id="L64">      replaced = replaced</span>
+<span class="fc" id="L65">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[zip]]&quot;), entry.getValue().get(7));</span>
+<span class="fc" id="L66">      replaced = replaced</span>
+<span class="fc" id="L67">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[phone1]]&quot;), entry.getValue().get(8));</span>
+<span class="fc" id="L68">      replaced = replaced</span>
+<span class="fc" id="L69">          .replaceAll(java.util.regex.Pattern.quote(&quot;[[phone2]]&quot;), entry.getValue().get(9));</span>
+
+
+<span class="fc" id="L72">      lst.add(replaced);</span>
+
+<span class="fc" id="L74">    }</span>
+
+<span class="fc" id="L76">    int length = lst.size();</span>
+<span class="fc" id="L77">    ArrayList&lt;String&gt; filenames = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L79" title="All 2 branches covered.">    for (int i = 0; i &lt; length; i++) {</span>
+<span class="fc" id="L80">      String s = null;</span>
+<span class="fc" id="L81">      s = &quot;generatedMessage&quot; + i + &quot;.txt&quot;;</span>
+<span class="fc" id="L82">      filenames.add(s);</span>
+    }
+
+
+<span class="fc bfc" id="L86" title="All 2 branches covered.">    for (int i = 0; i &lt; length; i++) {</span>
+
+<span class="fc" id="L88">      FileOutputStream outputStream = null;</span>
+      try {
+<span class="fc" id="L90">        outputStream = new FileOutputStream(outputDir +&quot;/&quot;+ filenames.get(i));</span>
+<span class="nc" id="L91">      } catch (FileNotFoundException e) {</span>
+<span class="nc" id="L92">        e.printStackTrace();</span>
+<span class="fc" id="L93">      }</span>
+<span class="fc" id="L94">      byte[] allBytes = lst.get(i).getBytes();</span>
+      try {
+<span class="fc" id="L96">        outputStream.write(allBytes);</span>
+<span class="nc" id="L97">      } catch (IOException e) {</span>
+<span class="nc" id="L98">        e.printStackTrace();</span>
+<span class="fc" id="L99">      }</span>
+
+      try {
+<span class="fc" id="L102">        outputStream.close();</span>
+<span class="nc" id="L103">      } catch (IOException e) {</span>
+<span class="nc" id="L104">        e.printStackTrace();</span>
+<span class="fc" id="L105">      }</span>
+
+    }
+    //System.out.println(filenames);
+
+    //System.out.println(lst);
+
+<span class="fc" id="L112">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

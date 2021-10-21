@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CriteriaReaderTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:41" hostname="Steves-Macbook-Pro.local" time="0.017">
+  <properties/>
+  <testcase name="getBudgetPriority" classname="CriteriaReaderTest" time="0.011"/>
+  <testcase name="getDesiredShelfAmount" classname="CriteriaReaderTest" time="0.001"/>
+  <testcase name="getCriteria" classname="CriteriaReaderTest" time="0.001"/>
+  <testcase name="getDesiredMounting" classname="CriteriaReaderTest" time="0.001"/>
+  <testcase name="getDesiredDrawerAmount" classname="CriteriaReaderTest" time="0.0"/>
+  <testcase name="getDesiredHeight" classname="CriteriaReaderTest" time="0.001"/>
+  <testcase name="getDesiredColor" classname="CriteriaReaderTest" time="0.001"/>
+  <testcase name="getDesiredWidth" classname="CriteriaReaderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GagaDrawerFront.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">GagaDrawerFront.java</span></div><h1>GagaDrawerFront.java</h1><pre class="source lang-java linenums">
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+
+/**
+ * GagaDrawerFront class represents a GagaDrawerFront DrawerFront.
+ */
+public class GagaDrawerFront extends DrawerFront {
+
+  private ArrayList&lt;String&gt; colors;
+  private Boolean handleIncluded;
+<span class="fc" id="L13">  private ArrayList&lt;String&gt; quarColors = new ArrayList(</span>
+<span class="fc" id="L14">      Arrays.asList(&quot;brown&quot;, &quot;black&quot;, &quot;bone&quot;, &quot;oxblood&quot;));</span>
+
+  /**
+   * Constructor with following parameters.
+   *
+   * @param size the size of a modular.
+   */
+  public GagaDrawerFront(String size) {
+<span class="fc" id="L22">    super(size);</span>
+<span class="fc" id="L23">    this.setColors(size);</span>
+<span class="fc" id="L24">    this.setHandleIncluded(size);</span>
+<span class="fc" id="L25">  }</span>
+
+  /**
+   * get the name of the type.
+   *
+   * @return the name
+   */
+  @Override
+  public String getTypeName() {
+<span class="fc" id="L34">    return &quot;GagaDrawerFront&quot;;</span>
+  }
+
+  /**
+   * get the colors of a modular.
+   *
+   * @return a ArrayList of colors.
+   */
+  @Override
+  public ArrayList&lt;String&gt; getColors() {
+<span class="fc" id="L44">    return this.colors;</span>
+  }
+
+  /**
+   * set the colors of a modular base on the size.
+   *
+   * @param size String.
+   */
+  public void setColors(String size) {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">    if (size.equals(&quot;QUARTER&quot;)) {</span>
+<span class="fc" id="L54">      this.colors = this.quarColors;</span>
+    }
+
+<span class="fc" id="L57">  }</span>
+
+  /**
+   * check if handle is required for the modular.
+   *
+   * @return true if it's required, false otherwise.
+   */
+  public Boolean getHandleIncluded() {
+<span class="fc" id="L65">    return this.handleIncluded;</span>
+  }
+
+  /**
+   * set if handle is required base on size.
+   *
+   * @param size String.
+   */
+  public void setHandleIncluded(String size) {
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    if (size.equals(&quot;QUARTER&quot;)) {</span>
+<span class="fc" id="L75">      this.handleIncluded = false;</span>
+    }
+
+<span class="fc" id="L78">  }</span>
+
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L82">      return true;</span>
+<span class="pc bpc" id="L83" title="1 of 4 branches missed.">    } else if (o != null &amp;&amp; this.getClass() == o.getClass()) {</span>
+<span class="fc" id="L84">      GagaDrawerFront that = (GagaDrawerFront) o;</span>
+<span class="pc bpc" id="L85" title="2 of 4 branches missed.">      return this.colors.equals(that.colors) &amp;&amp; this.handleIncluded.equals(that.handleIncluded)</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">          &amp;&amp; this.quarColors.equals(that.quarColors);</span>
+    } else {
+<span class="fc" id="L88">      return false;</span>
+    }
+  }
+
+  public int hashCode() {
+<span class="fc" id="L93">    return Objects.hash(this.colors, this.handleIncluded, this.quarColors);</span>
+  }
+
+  public String toString() {
+<span class="fc" id="L97">    return &quot;GagaDrawerFront{colors=&quot; + this.colors + &quot;, handleIncluded=&quot; + this.handleIncluded</span>
+        + &quot;, quarColors=&quot; + this.quarColors + '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

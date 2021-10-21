@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SlothropTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="getDimension" classname="SlothropTest" time="0.0"/>
+  <testcase name="testToString" classname="SlothropTest" time="0.0"/>
+  <testcase name="setHandleIncluded" classname="SlothropTest" time="0.0"/>
+  <testcase name="getSize" classname="SlothropTest" time="0.0"/>
+  <testcase name="setColors" classname="SlothropTest" time="0.0"/>
+  <testcase name="getColors" classname="SlothropTest" time="0.0"/>
+  <testcase name="setDimension" classname="SlothropTest" time="0.0"/>
+  <testcase name="getHandleIncluded" classname="SlothropTest" time="0.0"/>
+  <testcase name="testHashCode" classname="SlothropTest" time="0.0"/>
+  <testcase name="testEquals" classname="SlothropTest" time="0.0"/>
+  <testcase name="getTypeName" classname="SlothropTest" time="0.001"/>
+  <testcase name="setSize" classname="SlothropTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

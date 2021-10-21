@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommandParser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment3</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">CommandParser.java</span></div><h1>CommandParser.java</h1><pre class="source lang-java linenums">import java.io.File;
+import java.util.Arrays;
+
+/**
+ * This class represents a command parser which parses command lines.
+ */
+public class CommandParser {
+
+  final static public int EXPECTED_LENGTH = 7;
+  final static public String USAGE = &quot;Usage:\n&quot;
+      + &quot; --email only generate email messages\n&quot;
+      + &quot; --email-template &lt;file&gt; accept a filename that holds the email template. Required if --email is used\n&quot;
+      + &quot; --letter only generate letters\n&quot;
+      + &quot; --letter-template &lt;file&gt; accept a filename that holds the email template. Required if --letter is used\n&quot;
+      + &quot; --output-dir &lt;path&gt; accept the name of a folder, all output is placed in this folder\n&quot;
+      + &quot; --csv-file &lt;path&gt; accept the name of the csv file to process\n&quot;
+      + &quot;Examples:\n&quot;
+      + &quot; --email --email-template email-template.txt --output-dir emails --csv-file customer.csv\n&quot;
+      + &quot; --letter --letter-template letter-template.txt --outputdir letters --csv-file customer.csv\n&quot;
+      + &quot;Please Include suffix of the file such as '.txt' or '.csv'.&quot;;
+
+  /**
+   * Simple constructor that constructs the object.
+   */
+<span class="fc" id="L25">  public CommandParser() {</span>
+<span class="fc" id="L26">  }</span>
+
+  /**
+   * Get the template name from command line.
+   *
+   * @param args command lines.
+   * @return the template name as String.
+   */
+  public String getTemplateName(String[] args) {
+<span class="fc" id="L35">    String templateName = &quot;&quot;;</span>
+
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">    if (args.length != EXPECTED_LENGTH) {</span>
+<span class="nc" id="L38">      System.out.println(USAGE);</span>
+<span class="nc" id="L39">      System.exit(8);</span>
+    }
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">    for (int i = 0; i &lt; args.length; i++) {</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">      if (args[i].equals(&quot;--email&quot;)) {</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (Arrays.asList(args).contains(&quot;--email-template&quot;)) {</span>
+<span class="fc" id="L45">          templateName = args[Arrays.asList(args).indexOf(&quot;--email-template&quot;) + 1];</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">          if (!templateName.contains(&quot;.txt&quot;)) {</span>
+<span class="nc" id="L47">            System.out.println(USAGE);</span>
+<span class="nc" id="L48">            System.exit(10);</span>
+          }
+        } else {
+<span class="nc" id="L51">          System.out.println(&quot;Error: --email is provided but no --email-template is given.&quot;);</span>
+<span class="nc" id="L52">          System.exit(5);</span>
+        }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">      } else if (args[i].equals(&quot;--letter&quot;)) {</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">        if (Arrays.asList(args).contains(&quot;--letter-template&quot;)) {</span>
+<span class="fc" id="L56">          templateName = args[Arrays.asList(args).indexOf(&quot;--letter-template&quot;) + 1];</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">          if (!templateName.contains(&quot;.txt&quot;)) {</span>
+<span class="nc" id="L58">            System.out.println(USAGE);</span>
+<span class="nc" id="L59">            System.exit(10);</span>
+          }
+        } else {
+<span class="nc" id="L62">          System.out.println(&quot;Error: --letter is provided but no --letter-template is given.&quot;);</span>
+<span class="nc" id="L63">          System.exit(6);</span>
+        }
+<span class="fc bfc" id="L65" title="All 2 branches covered.">      } else if (!Arrays.asList(args).contains(&quot;--email&quot;) &amp;&amp; !Arrays.asList(args)</span>
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">          .contains(&quot;--letter&quot;)) {</span>
+<span class="nc" id="L67">        System.out.println(USAGE);</span>
+<span class="nc" id="L68">        System.exit(7);</span>
+
+      }
+
+    }
+<span class="fc" id="L73">    return templateName;</span>
+
+  }
+
+  /**
+   * Get the CSV file name from command line.
+   *
+   * @param args command lines.
+   * @return the name of CSV file as String.
+   */
+  public String getCSVFileName(String[] args) {
+<span class="fc" id="L84">    String csvFileName = &quot;&quot;;</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">    if (args.length != EXPECTED_LENGTH) {</span>
+<span class="nc" id="L86">      System.out.println(USAGE);</span>
+<span class="nc" id="L87">      System.exit(8);</span>
+    }
+
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">    if (Arrays.asList(args).contains(&quot;--csv-file&quot;) &amp;&amp; Arrays.asList(args)</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        .contains(&quot;--output-dir&quot;)) {</span>
+<span class="fc" id="L92">      csvFileName = args[Arrays.asList(args).indexOf(&quot;--csv-file&quot;) + 1];</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">      if (!csvFileName.contains(&quot;.csv&quot;)) {</span>
+<span class="nc" id="L94">        System.out.println(USAGE);</span>
+<span class="nc" id="L95">        System.exit(9);</span>
+      }
+
+    } else {
+<span class="nc" id="L99">      System.out.println(USAGE);</span>
+<span class="nc" id="L100">      System.exit(2);</span>
+    }
+<span class="fc" id="L102">    return csvFileName;</span>
+
+  }
+
+  /**
+   * Get the output directory from command lines.
+   *
+   * @param args command lines.
+   * @return output directory from command lines as String.
+   */
+  public String getOutputDir(String[] args) {
+<span class="fc" id="L113">    String outputDir = &quot;&quot;;</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">    if (args.length &lt; EXPECTED_LENGTH) {</span>
+<span class="nc" id="L115">      System.out.println(USAGE);</span>
+<span class="nc" id="L116">      System.exit(8);</span>
+    }
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">    if (Arrays.asList(args).contains(&quot;--csv-file&quot;) &amp;&amp; Arrays.asList(args)</span>
+<span class="pc bpc" id="L119" title="1 of 2 branches missed.">        .contains(&quot;--output-dir&quot;)) {</span>
+<span class="fc" id="L120">      outputDir = args[Arrays.asList(args).indexOf(&quot;--output-dir&quot;) + 1];</span>
+<span class="fc" id="L121">      File file = new File(outputDir);</span>
+<span class="fc" id="L122">      file.mkdirs();</span>
+<span class="fc" id="L123">    } else {</span>
+<span class="nc" id="L124">      System.out.println(USAGE);</span>
+<span class="nc" id="L125">      System.exit(2);</span>
+
+
+    }
+<span class="fc" id="L129">    return outputDir;</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BelacquaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="getDimension" classname="BelacquaTest" time="0.0"/>
+  <testcase name="testToString" classname="BelacquaTest" time="0.0"/>
+  <testcase name="setHandleIncluded" classname="BelacquaTest" time="0.001"/>
+  <testcase name="getSize" classname="BelacquaTest" time="0.0"/>
+  <testcase name="setColors" classname="BelacquaTest" time="0.0"/>
+  <testcase name="getColors" classname="BelacquaTest" time="0.0"/>
+  <testcase name="setDimension" classname="BelacquaTest" time="0.0"/>
+  <testcase name="getHandleIncluded" classname="BelacquaTest" time="0.0"/>
+  <testcase name="testHashCode" classname="BelacquaTest" time="0.0"/>
+  <testcase name="testEquals" classname="BelacquaTest" time="0.0"/>
+  <testcase name="getTypeName" classname="BelacquaTest" time="0.0"/>
+  <testcase name="setSize" classname="BelacquaTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

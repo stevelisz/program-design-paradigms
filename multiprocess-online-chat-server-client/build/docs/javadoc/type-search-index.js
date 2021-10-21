@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"client","l":"Client"},{"p":"server","l":"ClientPath"},{"p":"client","l":"ClientProtocol"},{"p":"client","l":"CloseUtil"},{"p":"server","l":"CloseUtil"},{"p":"client","l":"Receive"},{"p":"client","l":"Send"},{"p":"server","l":"Server"},{"p":"server","l":"ServerProtocol"}]

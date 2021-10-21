@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DimensionTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="testToString" classname="DimensionTest" time="0.0"/>
+  <testcase name="setDepth2" classname="DimensionTest" time="0.0"/>
+  <testcase name="setHeight" classname="DimensionTest" time="0.0"/>
+  <testcase name="getHeight" classname="DimensionTest" time="0.0"/>
+  <testcase name="testHashCode" classname="DimensionTest" time="0.0"/>
+  <testcase name="testEquals" classname="DimensionTest" time="0.0"/>
+  <testcase name="setDepth" classname="DimensionTest" time="0.0"/>
+  <testcase name="setWidth" classname="DimensionTest" time="0.0"/>
+  <testcase name="getDepth" classname="DimensionTest" time="0.0"/>
+  <testcase name="getWidth" classname="DimensionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

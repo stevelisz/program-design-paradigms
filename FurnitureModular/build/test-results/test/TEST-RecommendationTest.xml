@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RecommendationTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.015">
+  <properties/>
+  <testcase name="getRailType" classname="RecommendationTest" time="0.001"/>
+  <testcase name="getWallFixtureAmount" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getDoorAmount" classname="RecommendationTest" time="0.0"/>
+  <testcase name="addInfo" classname="RecommendationTest" time="0.008"/>
+  <testcase name="checkShelfAndDrawer" classname="RecommendationTest" time="0.0"/>
+  <testcase name="testToString" classname="RecommendationTest" time="0.001"/>
+  <testcase name="getDoorSize" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getDoorType" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getSize" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getType" classname="RecommendationTest" time="0.001"/>
+  <testcase name="getDoorHandles" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getMountingType" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getFeetAmount" classname="RecommendationTest" time="0.0"/>
+  <testcase name="testHashCode" classname="RecommendationTest" time="0.001"/>
+  <testcase name="testEquals" classname="RecommendationTest" time="0.0"/>
+  <testcase name="createJSON" classname="RecommendationTest" time="0.001"/>
+  <testcase name="getCabSize" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getHingesAmount" classname="RecommendationTest" time="0.0"/>
+  <testcase name="getCabAmount" classname="RecommendationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

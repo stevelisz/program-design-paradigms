@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>client.Client</OriginalElement>
+  <nodes>
+    <node x="415.94479166666673" y="1131.0">server.Server</node>
+    <node x="108.0" y="1120.0">client.Client</node>
+    <node x="214.00000000000003" y="758.0">client.Receive</node>
+    <node x="107.52187500000002" y="1287.0">client.ClientProtocol</node>
+    <node x="572.7604166666667" y="0.0">server.ServerProtocol</node>
+    <node x="92.17187500000011" y="273.0">client.CloseUtil</node>
+    <node x="516.3333333333335" y="649.0">server.ClientPath</node>
+    <node x="336.76041666666674" y="273.0">server.CloseUtil</node>
+    <node x="0.0" y="703.0">client.Send</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="client.Client" target="client.Receive">
+      <point x="47.0" y="-58.5" />
+      <point x="249.0" y="1100.0" />
+      <point x="258.5" y="1100.0" />
+      <point x="-44.5" y="101.5" />
+    </edge>
+    <edge source="server.ClientPath" target="server.ServerProtocol">
+      <point x="0.0" y="-210.5" />
+      <point x="634.8333333333335" y="624.0" />
+      <point x="627.9270833333335" y="624.0" />
+      <point x="-110.33333333333333" y="299.5" />
+    </edge>
+    <edge source="client.Receive" target="client.CloseUtil">
+      <point x="0.0" y="-101.5" />
+      <point x="303.0" y="624.0" />
+      <point x="254.1718750000001" y="624.0" />
+      <point x="54.0" y="26.5" />
+    </edge>
+    <edge source="server.ServerProtocol" target="server.Server">
+      <point x="110.33333333333331" y="299.5" />
+      <point x="848.59375" y="624.0" />
+      <point x="763.8333333333335" y="624.0" />
+      <point x="763.8333333333335" y="1100.0" />
+      <point x="809.2447916666667" y="1100.0" />
+      <point x="174.8" y="-47.5" />
+    </edge>
+    <edge source="client.Client" target="client.Send">
+      <point x="-47.0" y="-58.5" />
+      <point x="155.0" y="1100.0" />
+      <point x="145.5" y="1100.0" />
+      <point x="48.5" y="156.5" />
+    </edge>
+    <edge source="client.Send" target="client.CloseUtil">
+      <point x="1.1368683772161603E-13" y="-156.5" />
+      <point x="97.00000000000011" y="624.0" />
+      <point x="146.1718750000001" y="624.0" />
+      <point x="-54.0" y="26.5" />
+    </edge>
+    <edge source="client.ClientProtocol" target="server.Server">
+      <point x="127.875" y="-212.5" />
+      <point x="405.896875" y="1262.0" />
+      <point x="634.4447916666668" y="1262.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="server.ServerProtocol" target="server.ClientPath">
+      <point x="0.0" y="299.5" />
+      <point x="738.2604166666667" y="624.0" />
+      <point x="713.8333333333335" y="624.0" />
+      <point x="79.0" y="-210.5" />
+    </edge>
+    <edge source="server.Server" target="server.ClientPath">
+      <point x="-174.79999999999995" y="-47.5" />
+      <point x="459.6447916666668" y="1090.0" />
+      <point x="545.9583333333335" y="1090.0" />
+      <point x="-88.875" y="210.5" />
+    </edge>
+    <edge source="client.Send" target="client.ClientProtocol">
+      <point x="-48.5" y="156.5" />
+      <point x="48.5" y="1100.0" />
+      <point x="68.25" y="1100.0" />
+      <point x="68.25" y="1262.0" />
+      <point x="150.14687500000002" y="1262.0" />
+      <point x="-127.875" y="-212.5" />
+    </edge>
+    <edge source="server.ClientPath" target="server.CloseUtil">
+      <point x="-79.0" y="-210.5" />
+      <point x="555.8333333333335" y="624.0" />
+      <point x="444.76041666666674" y="624.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="client.Receive" target="client.ClientProtocol">
+      <point x="44.5" y="101.5" />
+      <point x="347.5" y="1100.0" />
+      <point x="331.75" y="1100.0" />
+      <point x="331.75" y="1262.0" />
+      <point x="320.646875" y="1262.0" />
+      <point x="42.625" y="-212.5" />
+    </edge>
+    <edge source="server.ClientPath" target="server.Server">
+      <point x="88.875" y="210.5" />
+      <point x="723.7083333333335" y="1100.0" />
+      <point x="721.8447916666667" y="1100.0" />
+      <point x="87.39999999999998" y="-47.5" />
+    </edge>
+    <edge source="client.ClientProtocol" target="client.Client">
+      <point x="-42.625" y="-212.5" />
+      <point x="235.39687500000002" y="1262.0" />
+      <point x="202.0" y="1262.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5782466966814283" x="938.0685945625273" y="1149.796238930635" />
+  <SelectedNodes>
+    <node>client.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,6 @@
+-d '/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/build/docs/javadoc'
+-doctitle 'assignment3 1.0-SNAPSHOT API'
+-quiet 
+-windowtitle 'assignment3 1.0-SNAPSHOT API'
+'/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/src/main/java/CSVGetter.java'
+'/Users/Steve/Desktop/5010/assignments/Student_Shuaizhen_Li/assignment3/src/main/java/Main.java'

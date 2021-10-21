@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FurnitureModular.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">FurnitureModular.java</span></div><h1>FurnitureModular.java</h1><pre class="source lang-java linenums">/**
+ * This abstract class represents Furniture Modular.
+ */
+public abstract class FurnitureModular {
+
+  private String size;
+  private Double price;
+<span class="fc" id="L8">  private final static Double TEMP_PRICE = 0.0;</span>
+
+  /**
+   * Constructor with following parameter, size.
+   *
+   * @param size
+   */
+<span class="fc" id="L15">  public FurnitureModular(String size) {</span>
+<span class="pc bpc" id="L16" title="1 of 6 branches missed.">    if (!size.equals(&quot;WARDROBE&quot;) &amp;&amp; !size.equals(&quot;HALF&quot;) &amp;&amp; !size.equals(&quot;QUARTER&quot;)) {</span>
+<span class="nc" id="L17">      throw new IllegalArgumentException(&quot;Please enter a proper size.&quot;);</span>
+    } else {
+<span class="fc" id="L19">      this.size = size;</span>
+    }
+<span class="fc" id="L21">  }</span>
+
+  /**
+   * get the size of a modular.
+   *
+   * @return size as String.
+   */
+  public String getSize() {
+<span class="fc" id="L29">    return this.size;</span>
+  }
+
+  /**
+   * set the size of a modular.
+   *
+   * @param size String.
+   */
+  public void setSize(String size) {
+<span class="fc" id="L38">    this.size = size;</span>
+<span class="fc" id="L39">  }</span>
+
+  /**
+   * get the price of a modular.
+   *
+   * @return a constant which is 0 because the price is unknown yet.
+   */
+  public Double getPrice() {
+<span class="nc" id="L47">    return TEMP_PRICE;</span>
+  }
+
+  /**
+   * set the price of a modular.
+   *
+   * @param price Double.
+   */
+  public void setPrice(Double price) {
+<span class="nc" id="L56">    this.price = price;</span>
+<span class="nc" id="L57">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

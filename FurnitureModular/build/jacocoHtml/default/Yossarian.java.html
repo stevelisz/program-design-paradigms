@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Yossarian.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Yossarian.java</span></div><h1>Yossarian.java</h1><pre class="source lang-java linenums">import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+
+/**
+ * Yossarian class extends Cabinet class and with many fixed properties due to its characteristics.
+ */
+public class Yossarian extends Cabinet {
+
+<span class="fc" id="L10">  private ArrayList&lt;String&gt; warColors = new ArrayList(</span>
+<span class="fc" id="L11">      Arrays.asList(&quot;brown&quot;, &quot;black&quot;, &quot;bone&quot;, &quot;oxblood&quot;));</span>
+<span class="fc" id="L12">  private ArrayList&lt;String&gt; halfColors = new ArrayList(Arrays.asList(&quot;brown&quot;, &quot;black&quot;, &quot;bone&quot;));</span>
+<span class="fc" id="L13">  private ArrayList&lt;String&gt; quarColors = new ArrayList(Arrays.asList(&quot;brown&quot;, &quot;black&quot;, &quot;bone&quot;));</span>
+  private ArrayList&lt;String&gt; colors;
+  private Mounting mounting;
+  private Feet feet;
+  private final Rail rail;
+  private int shelfAmount;
+  private int drawerAmount;
+  private Boolean earthquakeSafety;
+<span class="fc" id="L21">  private final int MAX_WARDROBE_SHELF_AMOUNT = 7;</span>
+<span class="fc" id="L22">  private final int MAX_HALF_SHELF_AMOUNT = 3;</span>
+<span class="fc" id="L23">  private final int MAX_QUARTER_SHELF_AMOUNT = 1;</span>
+<span class="fc" id="L24">  private final int MAX_DRAWER_AMOUNT = 0;</span>
+
+  /**
+   * Constructor with following parameters.
+   *
+   * @param size the size of a modular.
+   */
+  public Yossarian(String size) {
+<span class="fc" id="L32">    super(size);</span>
+<span class="fc" id="L33">    this.rail = Rail.standard;</span>
+<span class="fc" id="L34">    this.setColors(size);</span>
+<span class="fc" id="L35">    this.setDrawerAmount(size);</span>
+<span class="fc" id="L36">    this.setMounting(size);</span>
+<span class="fc" id="L37">    this.setFeet(size);</span>
+<span class="fc" id="L38">    this.setShelfAmount(size);</span>
+<span class="fc" id="L39">  }</span>
+
+  /**
+   * get the colors of a modular.
+   *
+   * @return a ArrayList of colors.
+   */
+  public ArrayList&lt;String&gt; getColors() {
+<span class="fc" id="L47">    return this.colors;</span>
+  }
+
+  /**
+   * set the colors of a modular base on the size.
+   *
+   * @param size String.
+   */
+  public void setColors(String size) {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">    if (size.equals(&quot;WARDROBE&quot;)) {</span>
+<span class="fc" id="L57">      this.colors = this.warColors;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">    } else if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L59">      this.colors = this.halfColors;</span>
+    } else {
+<span class="fc" id="L61">      this.colors = this.quarColors;</span>
+    }
+
+<span class="fc" id="L64">  }</span>
+
+  /**
+   * get the mounting type of a modular.
+   *
+   * @return Mounting type.
+   */
+  public Mounting getMounting() {
+<span class="fc" id="L72">    return this.mounting;</span>
+  }
+
+  /**
+   * set the mounting type of a modular base on size.
+   *
+   * @param size String.
+   */
+  public void setMounting(String size) {
+<span class="fc bfc" id="L81" title="All 2 branches covered.">    if (size.equals(&quot;WARDROBE&quot;)) {</span>
+<span class="fc" id="L82">      this.mounting = Mounting.floor;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">    } else if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L84">      this.mounting = Mounting.floorOrWall;</span>
+    } else {
+<span class="fc" id="L86">      this.mounting = Mounting.floorOrWall;</span>
+    }
+
+<span class="fc" id="L89">  }</span>
+
+  /**
+   * check if feet is required for certain modular.
+   *
+   * @return Feet type.
+   */
+  public Feet getFeet() {
+<span class="fc" id="L97">    return this.feet;</span>
+  }
+
+  /**
+   * set if feet is required for certain modular.
+   *
+   * @param size String.
+   */
+  public void setFeet(String size) {
+<span class="fc bfc" id="L106" title="All 2 branches covered.">    if (size.equals(&quot;WARDROBE&quot;)) {</span>
+<span class="fc" id="L107">      this.feet = Feet.notRequired;</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">    } else if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L109">      this.feet = Feet.optional;</span>
+    } else {
+<span class="fc" id="L111">      this.feet = Feet.required;</span>
+    }
+
+<span class="fc" id="L114">  }</span>
+
+  /**
+   * check if the modular requires earthquakesafety(wall fixture);
+   *
+   * @return true if the modular needs wall fixtures. False otherwise.
+   */
+  public Boolean getEarthquakeSafety() {
+<span class="fc" id="L122">    return this.earthquakeSafety;</span>
+
+  }
+
+  /**
+   * Set if wall fixture is needed base on size.
+   *
+   * @param size String.
+   */
+  public void setEarthquakeSafety(String size) {
+<span class="fc bfc" id="L132" title="All 2 branches covered.">    if (size.equals(&quot;WARDROBE&quot;)) {</span>
+<span class="fc" id="L133">      this.earthquakeSafety = true;</span>
+    } else {
+<span class="fc" id="L135">      this.earthquakeSafety = false;</span>
+    }
+<span class="fc" id="L137">  }</span>
+
+  /**
+   * get rail type of the modular.
+   *
+   * @return Rail type.
+   */
+  public Rail getRail() {
+<span class="fc" id="L145">    return this.rail;</span>
+  }
+
+  /**
+   * get maximum shelf of a modular.
+   *
+   * @return amount.
+   */
+  @Override
+  public int getShelfAmount() {
+<span class="fc" id="L155">    return this.shelfAmount;</span>
+  }
+
+  /**
+   * set max shelf amount of a modular base on size.
+   *
+   * @param size String.
+   */
+  public void setShelfAmount(String size) {
+<span class="fc bfc" id="L164" title="All 2 branches covered.">    if (size.equals(&quot;WARDROBE&quot;)) {</span>
+<span class="fc" id="L165">      this.shelfAmount = MAX_WARDROBE_SHELF_AMOUNT;</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">    } else if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L167">      this.shelfAmount = MAX_HALF_SHELF_AMOUNT;</span>
+    } else {
+<span class="fc" id="L169">      this.shelfAmount = MAX_QUARTER_SHELF_AMOUNT;</span>
+    }
+
+<span class="fc" id="L172">  }</span>
+
+  /**
+   * get maximum drawer of a modular.
+   *
+   * @return amount.
+   */
+  @Override
+  public int getDrawerAmount() {
+<span class="fc" id="L181">    return this.drawerAmount;</span>
+  }
+
+  /**
+   * set max drawer amount of a modular base on size.
+   *
+   * @param size String.
+   */
+  public void setDrawerAmount(String size) {
+<span class="fc" id="L190">    this.drawerAmount = MAX_DRAWER_AMOUNT;</span>
+<span class="fc" id="L191">  }</span>
+
+  @Override
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L195" title="1 of 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L196">      return true;</span>
+    }
+<span class="pc bpc" id="L198" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L199">      return false;</span>
+    }
+<span class="fc" id="L201">    Yossarian yossarian = (Yossarian) o;</span>
+<span class="pc bpc" id="L202" title="1 of 4 branches missed.">    return shelfAmount == yossarian.shelfAmount &amp;&amp;</span>
+        drawerAmount == yossarian.drawerAmount &amp;&amp;
+<span class="pc bpc" id="L204" title="4 of 8 branches missed.">        colors.equals(yossarian.colors) &amp;&amp;</span>
+        mounting == yossarian.mounting &amp;&amp;
+        feet == yossarian.feet &amp;&amp;
+        rail == yossarian.rail;
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L212">    return Objects.hash(colors, mounting, feet, rail, shelfAmount, drawerAmount);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L217">    return &quot;Yossarian{&quot; +</span>
+        &quot;colors=&quot; + colors +
+        &quot;, mounting=&quot; + mounting +
+        &quot;, feet=&quot; + feet +
+        &quot;, rail=&quot; + rail +
+        &quot;, shelfAmount=&quot; + shelfAmount +
+        &quot;, drawerAmount=&quot; + drawerAmount +
+        '}';
+  }
+
+  @Override
+  public String getTypeName() {
+<span class="fc" id="L229">    return &quot;Yossarian&quot;;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

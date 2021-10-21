@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AtreidesTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.011">
+  <properties/>
+  <testcase name="getDimension" classname="AtreidesTest" time="0.003"/>
+  <testcase name="testToString" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getShelfAmount" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getFeet" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getRail" classname="AtreidesTest" time="0.001"/>
+  <testcase name="getSize" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setColors" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getColors" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setDimension" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getDrawerAmount" classname="AtreidesTest" time="0.0"/>
+  <testcase name="testHashCode" classname="AtreidesTest" time="0.0"/>
+  <testcase name="testEquals" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getTypeName" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setDrawerAmount" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setShelfAmount" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setMounting" classname="AtreidesTest" time="0.0"/>
+  <testcase name="getMounting" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setFeet" classname="AtreidesTest" time="0.0"/>
+  <testcase name="setSize" classname="AtreidesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

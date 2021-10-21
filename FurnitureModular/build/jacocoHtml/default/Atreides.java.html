@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Atreides.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Atreides.java</span></div><h1>Atreides.java</h1><pre class="source lang-java linenums">
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+
+/**
+ * Atreides class extends Cabinet class and with many fixed properties due to its characteristics.
+ */
+
+public class Atreides extends Cabinet {
+
+<span class="fc" id="L12">  private ArrayList&lt;String&gt; halfColors = new ArrayList(Arrays.asList(&quot;brown&quot;, &quot;bone&quot;));</span>
+<span class="fc" id="L13">  private ArrayList&lt;String&gt; quarColors = new ArrayList(Arrays.asList(&quot;brown&quot;, &quot;bone&quot;));</span>
+  private ArrayList&lt;String&gt; colors;
+  private Mounting mounting;
+  private Feet feet;
+  private final Rail rail;
+  private int shelfAmount;
+  private int drawerAmount;
+<span class="fc" id="L20">  private final int MAX_HALF_SHELF_AMOUNT = 3;</span>
+<span class="fc" id="L21">  private final int MAX_HALF_DRAWER_AMOUNT = 0;</span>
+<span class="fc" id="L22">  private final int MAX_QUARTER_SHELF_AMOUNT = 1;</span>
+<span class="fc" id="L23">  private final int MAX_QUARTER_DRAWER_AMOUNT = 0;</span>
+
+  /**
+   * Constructor with following parameters.
+   *
+   * @param size the size of a modular.
+   */
+  public Atreides(String size) {
+<span class="fc" id="L31">    super(size);</span>
+<span class="fc" id="L32">    this.rail = Rail.atreides;</span>
+<span class="fc" id="L33">    this.setColors(size);</span>
+<span class="fc" id="L34">    this.setDrawerAmount(size);</span>
+<span class="fc" id="L35">    this.setMounting(size);</span>
+<span class="fc" id="L36">    this.setFeet(size);</span>
+<span class="fc" id="L37">    this.setShelfAmount(size);</span>
+<span class="fc" id="L38">  }</span>
+
+  /**
+   * get the colors of a modular.
+   *
+   * @return a ArrayList of colors.
+   */
+
+  public ArrayList&lt;String&gt; getColors() {
+<span class="fc" id="L47">    return this.colors;</span>
+  }
+
+  /**
+   * set the colors of a modular base on the size.
+   *
+   * @param size String.
+   */
+  public void setColors(String size) {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">    if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L57">      this.colors = this.halfColors;</span>
+    } else {
+<span class="fc" id="L59">      this.colors = this.quarColors;</span>
+    }
+
+<span class="fc" id="L62">  }</span>
+
+  /**
+   * get the mounting type of a modular.
+   *
+   * @return Mounting type.
+   */
+  public Mounting getMounting() {
+<span class="fc" id="L70">    return this.mounting;</span>
+  }
+
+  /**
+   * set the mounting type of a modular base on size.
+   *
+   * @param size String.
+   */
+  public void setMounting(String size) {
+<span class="fc bfc" id="L79" title="All 2 branches covered.">    if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L80">      this.mounting = Mounting.floorOrWall;</span>
+    } else {
+<span class="fc" id="L82">      this.mounting = Mounting.floorOrWall;</span>
+    }
+
+<span class="fc" id="L85">  }</span>
+
+  /**
+   * check if feet is required for certain modular.
+   *
+   * @return Feet type.
+   */
+  public Feet getFeet() {
+<span class="fc" id="L93">    return this.feet;</span>
+  }
+
+  /**
+   * set if feet is required for certain modular.
+   *
+   * @param size String.
+   */
+  public void setFeet(String size) {
+<span class="fc bfc" id="L102" title="All 2 branches covered.">    if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L103">      this.feet = Feet.optional;</span>
+    } else {
+<span class="fc" id="L105">      this.feet = Feet.optional;</span>
+    }
+
+<span class="fc" id="L108">  }</span>
+
+  /**
+   * get rail type of the modular.
+   *
+   * @return Rail type.
+   */
+
+  public Rail getRail() {
+<span class="fc" id="L117">    return this.rail;</span>
+  }
+
+  /**
+   * get maximum shelf of a modular.
+   *
+   * @return amount.
+   */
+
+
+  @Override
+  public int getShelfAmount() {
+<span class="fc" id="L129">    return this.shelfAmount;</span>
+  }
+
+  /**
+   * set max shelf amount of a modular base on size.
+   *
+   * @param size String.
+   */
+
+  public void setShelfAmount(String size) {
+<span class="fc bfc" id="L139" title="All 2 branches covered.">    if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L140">      this.shelfAmount = MAX_HALF_SHELF_AMOUNT;</span>
+    } else {
+<span class="fc" id="L142">      this.shelfAmount = MAX_QUARTER_SHELF_AMOUNT;</span>
+    }
+
+<span class="fc" id="L145">  }</span>
+
+  /**
+   * get maximum drawer of a modular.
+   *
+   * @return amount.
+   */
+  @Override
+  public int getDrawerAmount() {
+<span class="fc" id="L154">    return this.drawerAmount;</span>
+  }
+
+  /**
+   * set max drawer amount of a modular base on size.
+   *
+   * @param size String.
+   */
+  public void setDrawerAmount(String size) {
+<span class="fc bfc" id="L163" title="All 2 branches covered.">    if (size.equals(&quot;HALF&quot;)) {</span>
+<span class="fc" id="L164">      this.drawerAmount = MAX_HALF_DRAWER_AMOUNT;</span>
+    } else {
+<span class="fc" id="L166">      this.drawerAmount = MAX_QUARTER_DRAWER_AMOUNT;</span>
+    }
+
+<span class="fc" id="L169">  }</span>
+
+  @Override
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L173" title="1 of 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L174">      return true;</span>
+    }
+<span class="pc bpc" id="L176" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L177">      return false;</span>
+    }
+<span class="fc" id="L179">    Atreides atreides = (Atreides) o;</span>
+<span class="pc bpc" id="L180" title="1 of 4 branches missed.">    return shelfAmount == atreides.shelfAmount &amp;&amp;</span>
+        drawerAmount == atreides.drawerAmount &amp;&amp;
+<span class="pc bpc" id="L182" title="4 of 8 branches missed.">        colors.equals(atreides.colors) &amp;&amp;</span>
+        mounting == atreides.mounting &amp;&amp;
+        feet == atreides.feet &amp;&amp;
+        rail == atreides.rail;
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L190">    return Objects.hash(colors, mounting, feet, rail, shelfAmount, drawerAmount);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L195">    return &quot;Atreides{&quot; +</span>
+        &quot;colors=&quot; + colors +
+        &quot;, mounting=&quot; + mounting +
+        &quot;, feet=&quot; + feet +
+        &quot;, rail=&quot; + rail +
+        &quot;, shelfAmount=&quot; + shelfAmount +
+        &quot;, drawerAmount=&quot; + drawerAmount +
+        '}';
+  }
+
+  @Override
+  public String getTypeName() {
+<span class="fc" id="L207">    return &quot;Atreides&quot;;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

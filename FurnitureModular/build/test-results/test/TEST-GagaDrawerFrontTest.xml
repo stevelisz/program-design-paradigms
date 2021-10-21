@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GagaDrawerFrontTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="getDimension" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="testToString" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="setHandleIncluded" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="getSize" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="setColors" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="getColors" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="setDimension" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="getHandleIncluded" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="testHashCode" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="testEquals" classname="GagaDrawerFrontTest" time="0.0"/>
+  <testcase name="getTypeName" classname="GagaDrawerFrontTest" time="0.001"/>
+  <testcase name="setSize" classname="GagaDrawerFrontTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

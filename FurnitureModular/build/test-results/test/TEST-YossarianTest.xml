@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="YossarianTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2020-02-12T00:38:40" hostname="Steves-Macbook-Pro.local" time="0.005">
+  <properties/>
+  <testcase name="setEarthquakeSafety" classname="YossarianTest" time="0.0"/>
+  <testcase name="getDimension" classname="YossarianTest" time="0.0"/>
+  <testcase name="testToString" classname="YossarianTest" time="0.001"/>
+  <testcase name="getShelfAmount" classname="YossarianTest" time="0.0"/>
+  <testcase name="getEarthquakeSafety" classname="YossarianTest" time="0.0"/>
+  <testcase name="getFeet" classname="YossarianTest" time="0.0"/>
+  <testcase name="getRail" classname="YossarianTest" time="0.0"/>
+  <testcase name="getSize" classname="YossarianTest" time="0.0"/>
+  <testcase name="setColors" classname="YossarianTest" time="0.0"/>
+  <testcase name="getColors" classname="YossarianTest" time="0.0"/>
+  <testcase name="setDimension" classname="YossarianTest" time="0.0"/>
+  <testcase name="getDrawerAmount" classname="YossarianTest" time="0.0"/>
+  <testcase name="testHashCode" classname="YossarianTest" time="0.0"/>
+  <testcase name="testEquals" classname="YossarianTest" time="0.0"/>
+  <testcase name="getTypeName" classname="YossarianTest" time="0.0"/>
+  <testcase name="setDrawerAmount" classname="YossarianTest" time="0.0"/>
+  <testcase name="setShelfAmount" classname="YossarianTest" time="0.001"/>
+  <testcase name="setMounting" classname="YossarianTest" time="0.0"/>
+  <testcase name="getMounting" classname="YossarianTest" time="0.0"/>
+  <testcase name="setFeet" classname="YossarianTest" time="0.0"/>
+  <testcase name="setSize" classname="YossarianTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.17.0" timestamp="2020-04-13T10:43:35.890">
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Client.java">
+<violation beginline="14" endline="14" begincolumn="33" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="Client" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="15" endline="15" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Best Practices" package="client" class="Client" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="16" endline="16" begincolumn="32" endcolumn="33" rule="ShortVariable" ruleset="Code Style" package="client" class="Client" method="main" variable="br" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like br
+</violation>
+<violation beginline="16" endline="16" begincolumn="32" endcolumn="33" rule="CloseResource" ruleset="Error Prone" package="client" class="Client" method="main" variable="br" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this BufferedReader object are closed after use
+</violation>
+<violation beginline="16" endline="16" begincolumn="17" endcolumn="88" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="Client" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'br' could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Best Practices" package="client" class="Client" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="19" endline="19" begincolumn="24" endcolumn="29" rule="CloseResource" ruleset="Error Prone" package="client" class="Client" method="main" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this Socket object are closed after use
+</violation>
+<violation beginline="19" endline="19" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="Client" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'client' could be declared final
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/ClientProtocol.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="32" rule="UnusedImports" ruleset="Best Practices" package="client" class="ClientProtocol" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.io.DataOutputStream'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="21" rule="UnusedImports" ruleset="Best Practices" package="client" class="ClientProtocol" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util.Map'
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="25" rule="UnusedImports" ruleset="Best Practices" package="client" class="ClientProtocol" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'server.ClientPath'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="21" rule="UnusedImports" ruleset="Best Practices" package="client" class="ClientProtocol" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'server.Server'
+</violation>
+<violation beginline="10" endline="132" begincolumn="8" endcolumn="1" rule="ClassNamingConventions" ruleset="Code Style" package="client" class="ClientProtocol" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
+The utility class name 'ClientProtocol' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
+</violation>
+<violation beginline="13" endline="13" begincolumn="27" endcolumn="44" rule="LongVariable" ruleset="Code Style" package="client" class="ClientProtocol" variable="DISCONNECT_MESSAGE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like DISCONNECT_MESSAGE
+</violation>
+<violation beginline="14" endline="14" begincolumn="27" endcolumn="45" rule="LongVariable" ruleset="Code Style" package="client" class="ClientProtocol" variable="DISCONNECT_RESPONSE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like DISCONNECT_RESPONSE
+</violation>
+<violation beginline="15" endline="15" begincolumn="27" endcolumn="47" rule="LongVariable" ruleset="Code Style" package="client" class="ClientProtocol" variable="QUERY_CONNECTED_USERS" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like QUERY_CONNECTED_USERS
+</violation>
+<violation beginline="20" endline="20" begincolumn="27" endcolumn="45" rule="LongVariable" ruleset="Code Style" package="client" class="ClientProtocol" variable="QUERY_USER_RESPONSE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like QUERY_USER_RESPONSE
+</violation>
+<violation beginline="23" endline="23" begincolumn="39" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="processNewLine" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="26" begincolumn="7" endcolumn="42" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processNewLine" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '24'-'26').
+</violation>
+<violation beginline="24" endline="28" begincolumn="7" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processNewLine" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '24'-'28').
+</violation>
+<violation beginline="24" endline="30" begincolumn="7" endcolumn="52" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processNewLine" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '24'-'30').
+</violation>
+<violation beginline="24" endline="32" begincolumn="7" endcolumn="50" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processNewLine" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '24'-'32').
+</violation>
+<violation beginline="24" endline="34" begincolumn="7" endcolumn="39" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processNewLine" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '24'-'34').
+</violation>
+<violation beginline="29" endline="29" begincolumn="16" endcolumn="36" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="client" class="ClientProtocol" method="processNewLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="31" endline="31" begincolumn="16" endcolumn="39" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="client" class="ClientProtocol" method="processNewLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="39" endline="39" begincolumn="46" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="processServerResponse" variable="response" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'response' is not assigned and could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="5" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="processServerResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="41" endline="51" begincolumn="7" endcolumn="43" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '41'-'51').
+</violation>
+<violation beginline="41" endline="54" begincolumn="9" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '41'-'54').
+</violation>
+<violation beginline="41" endline="58" begincolumn="9" endcolumn="65" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '41'-'58').
+</violation>
+<violation beginline="41" endline="68" begincolumn="7" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="result" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'result' (lines '41'-'68').
+</violation>
+<violation beginline="42" endline="71" begincolumn="19" endcolumn="57" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="processedResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'processedResponse' (lines '42'-'71').
+</violation>
+<violation beginline="42" endline="42" begincolumn="5" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="processServerResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'processedResponse' could be declared final
+</violation>
+<violation beginline="43" endline="71" begincolumn="18" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" variable="onlineOthers" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'onlineOthers' (lines '43'-'71').
+</violation>
+<violation beginline="43" endline="43" begincolumn="5" endcolumn="49" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="processServerResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'onlineOthers' could be declared final
+</violation>
+<violation beginline="53" endline="53" begincolumn="31" endcolumn="31" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="63" endline="63" begincolumn="9" endcolumn="26" rule="SystemPrintln" ruleset="Best Practices" package="client" class="ClientProtocol" method="processServerResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="65" endline="67" begincolumn="75" endcolumn="5" rule="EmptyIfStmt" ruleset="Error Prone" package="client" class="ClientProtocol" method="processServerResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="73" endline="73" begincolumn="40" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateInsult" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="74" endline="74" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateInsult" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="83" endline="83" begincolumn="58" endcolumn="64" rule="UnusedFormalParameter" ruleset="Best Practices" package="client" class="ClientProtocol" method="generateDisconnectMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'newLine'.
+</violation>
+<violation beginline="83" endline="83" begincolumn="51" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateDisconnectMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="84" endline="84" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateDisconnectMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="60" endcolumn="66" rule="UnusedFormalParameter" ruleset="Best Practices" package="client" class="ClientProtocol" method="generateQueryConnectedUsers" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'newLine'.
+</violation>
+<violation beginline="91" endline="91" begincolumn="53" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateQueryConnectedUsers" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="92" endline="92" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateQueryConnectedUsers" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="100" endline="100" begincolumn="47" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateDirectMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="101" endline="101" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateDirectMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="114" endline="114" begincolumn="43" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateBroadCast" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="115" endline="115" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateBroadCast" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="125" endline="125" begincolumn="47" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateConnectMessage" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'username' is not assigned and could be declared final
+</violation>
+<violation beginline="126" endline="126" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="ClientProtocol" method="generateConnectMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/CloseUtil.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Best Practices" package="client" class="CloseUtil" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.io.IOException'
+</violation>
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="24" rule="DuplicateImports" ruleset="Code Style" package="client" class="CloseUtil" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#duplicateimports" priority="4">
+Avoid duplicate imports such as 'java.io.Closeable'
+</violation>
+<violation beginline="10" endline="13" begincolumn="36" endcolumn="42" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="CloseUtil" method="closeAll" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'c' (lines '10'-'13').
+</violation>
+<violation beginline="10" endline="10" begincolumn="37" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="CloseUtil" method="closeAll" variable="closeables" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'closeables' is not assigned and could be declared final
+</violation>
+<violation beginline="11" endline="11" begincolumn="31" endcolumn="31" rule="CloseResource" ruleset="Error Prone" package="client" class="CloseUtil" method="closeAll" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this Closeable object are closed after use
+</violation>
+<violation beginline="11" endline="11" begincolumn="21" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="CloseUtil" method="closeAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'c' could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="51" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="client" class="CloseUtil" method="closeAll" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Receive.java">
+<violation beginline="8" endline="8" begincolumn="27" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Receive" variable="dis" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="9" endline="9" begincolumn="18" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Receive" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="10" endline="10" begincolumn="19" endcolumn="22" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Receive" variable="flag" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="18" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="Receive" method="Receive" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'client' is not assigned and could be declared final
+</violation>
+<violation beginline="16" endline="16" begincolumn="33" endcolumn="53" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="client" class="Receive" method="Receive" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'client.getInputStream' due to existing same package import 'client.*'
+</violation>
+<violation beginline="24" endline="26" begincolumn="7" endcolumn="25" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="Receive" method="receive" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'msg' (lines '24'-'26').
+</violation>
+<violation beginline="37" endline="37" begincolumn="7" endcolumn="38" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="Receive" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'response' could be declared final
+</violation>
+<violation beginline="38" endline="38" begincolumn="7" endcolumn="69" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="Receive" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="9" endcolumn="26" rule="SystemPrintln" ruleset="Best Practices" package="client" class="Receive" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/client/Send.java">
+<violation beginline="10" endline="81" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Code Style" package="client" class="Send" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
+Avoid short class names like Send
+</violation>
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="27" rule="ShortVariable" ruleset="Code Style" package="client" class="Send" variable="br" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like br
+</violation>
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="br" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="28" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="dos" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="18" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="15" endline="15" begincolumn="19" endcolumn="22" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="flag" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="18" endcolumn="25" rule="UnusedPrivateField" ruleset="Best Practices" package="client" class="Send" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'username'.
+</violation>
+<violation beginline="16" endline="16" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="17" endline="17" begincolumn="24" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="client" class="Send" variable="menu" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="24" endline="24" begincolumn="15" endcolumn="27" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="Send" method="Send" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'client' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="30" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="Send" method="Send" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'username' is not assigned and could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="34" endcolumn="55" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="client" class="Send" method="Send" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'client.getOutputStream' due to existing same package import 'client.*'
+</violation>
+<violation beginline="42" endline="42" begincolumn="7" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="client" class="Send" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="12" endcolumn="29" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="client" class="Send" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="49" endline="49" begincolumn="21" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="client" class="Send" method="send" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+<violation beginline="60" endline="64" begincolumn="7" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="Send" method="getMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '60'-'64').
+</violation>
+<violation beginline="61" endline="63" begincolumn="7" endcolumn="29" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="client" class="Send" method="getMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'newLine' (lines '61'-'63').
+</violation>
+<violation beginline="65" endline="65" begincolumn="10" endcolumn="27" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="client" class="Send" method="getMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="66" endline="66" begincolumn="13" endcolumn="31" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="client" class="Send" method="getMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="67" endline="67" begincolumn="11" endcolumn="28" rule="SystemPrintln" ruleset="Best Practices" package="client" class="Send" method="getMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="79" endline="79" begincolumn="5" endcolumn="22" rule="SystemPrintln" ruleset="Best Practices" package="client" class="Send" method="printMenu" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/ClientPath.java">
+<violation beginline="11" endline="11" begincolumn="27" endcolumn="45" rule="LongVariable" ruleset="Code Style" package="server" class="ClientPath" variable="QUERY_USER_RESPONSE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like QUERY_USER_RESPONSE
+</violation>
+<violation beginline="13" endline="13" begincolumn="27" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ClientPath" variable="dis" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="28" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ClientPath" variable="dos" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="15" endline="15" begincolumn="18" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ClientPath" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="19" endcolumn="22" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ClientPath" variable="flag" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="17" endline="17" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ClientPath" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="19" endline="19" begincolumn="21" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="ClientPath" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'client' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="7" endcolumn="33" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="ClientPath" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'username' could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="25" endcolumn="33" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="server" class="ClientPath" method="ClientPath" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'receive' called during object construction
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="34" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="server" class="ClientPath" method="ClientPath" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'sendConnectResponse' called during object construction
+</violation>
+<violation beginline="35" endline="35" begincolumn="7" endcolumn="20" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="server" class="ClientPath" method="ClientPath" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'release' called during object construction
+</violation>
+<violation beginline="40" endline="42" begincolumn="7" endcolumn="62" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ClientPath" method="receive" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'msg' (lines '40'-'42').
+</violation>
+<violation beginline="49" endline="49" begincolumn="20" endcolumn="29" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="send" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'msg' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="21" endcolumn="23" rule="UselessParentheses" ruleset="Code Style" package="server" class="ClientPath" method="send" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="58" endline="90" begincolumn="11" endcolumn="39" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ClientPath" method="sendOthers" variable="entry" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'entry' (lines '58'-'90').
+</violation>
+<violation beginline="58" endline="58" begincolumn="26" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendOthers" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'msg' is not assigned and could be declared final
+</violation>
+<violation beginline="86" endline="99" begincolumn="13" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ClientPath" method="sendOthers" variable="isResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'isResponse' (lines '86'-'99').
+</violation>
+<violation beginline="86" endline="87" begincolumn="5" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendOthers" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'isResponse' could be declared final
+</violation>
+<violation beginline="86" endline="87" begincolumn="27" endcolumn="55" rule="UselessParentheses" ruleset="Code Style" package="server" class="ClientPath" method="sendOthers" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="88" endline="88" begincolumn="10" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendOthers" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entry' could be declared final
+</violation>
+<violation beginline="101" endline="103" begincolumn="18" endcolumn="64" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ClientPath" method="sendAll" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'username' (lines '101'-'103').
+</violation>
+<violation beginline="101" endline="101" begincolumn="23" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendAll" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+<violation beginline="102" endline="102" begincolumn="10" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'username' could be declared final
+</violation>
+<violation beginline="103" endline="103" begincolumn="7" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'member' could be declared final
+</violation>
+<violation beginline="121" endline="121" begincolumn="7" endcolumn="28" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="122" endline="122" begincolumn="12" endcolumn="25" rule="PositionLiteralsFirstInComparisons" ruleset="Best Practices" package="server" class="ClientPath" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons" priority="3">
+Position literals first in String comparisons
+</violation>
+<violation beginline="136" endline="136" begincolumn="5" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendConnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'identifier' could be declared final
+</violation>
+<violation beginline="137" endline="137" begincolumn="5" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendConnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'success' could be declared final
+</violation>
+<violation beginline="138" endline="139" begincolumn="5" endcolumn="87" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendConnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="140" endline="140" begincolumn="5" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ClientPath" method="sendConnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'sizeOfMessage' could be declared final
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/CloseUtil.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Best Practices" package="server" class="CloseUtil" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.io.IOException'
+</violation>
+<violation beginline="6" endline="6" begincolumn="8" endcolumn="24" rule="DuplicateImports" ruleset="Code Style" package="server" class="CloseUtil" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#duplicateimports" priority="4">
+Avoid duplicate imports such as 'java.io.Closeable'
+</violation>
+<violation beginline="10" endline="13" begincolumn="36" endcolumn="42" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="CloseUtil" method="closeAll" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'c' (lines '10'-'13').
+</violation>
+<violation beginline="10" endline="10" begincolumn="37" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="CloseUtil" method="closeAll" variable="closeables" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'closeables' is not assigned and could be declared final
+</violation>
+<violation beginline="11" endline="11" begincolumn="31" endcolumn="31" rule="CloseResource" ruleset="Error Prone" package="server" class="CloseUtil" method="closeAll" variable="c" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this Closeable object are closed after use
+</violation>
+<violation beginline="11" endline="11" begincolumn="21" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="CloseUtil" method="closeAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'c' could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="51" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="server" class="CloseUtil" method="closeAll" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/Server.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Best Practices" package="server" class="Server" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util.concurrent.CopyOnWriteArrayList'
+</violation>
+<violation beginline="12" endline="24" begincolumn="33" endcolumn="60" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="Server" method="main" variable="userName" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'userName' (lines '12'-'24').
+</violation>
+<violation beginline="12" endline="12" begincolumn="33" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="Server" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="13" endline="13" begincolumn="30" endcolumn="35" rule="CloseResource" ruleset="Error Prone" package="server" class="Server" method="main" variable="server" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this ServerSocket object are closed after use
+</violation>
+<violation beginline="13" endline="29" begincolumn="30" endcolumn="60" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="Server" method="main" variable="server" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'server' (lines '13'-'29').
+</violation>
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="Server" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'server' could be declared final
+</violation>
+<violation beginline="14" endline="14" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="17" endline="17" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="18" endline="18" begincolumn="32" endcolumn="37" rule="CloseResource" ruleset="Error Prone" package="server" class="Server" method="main" variable="client" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this Socket object are closed after use
+</violation>
+<violation beginline="18" endline="18" begincolumn="25" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="Server" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'client' could be declared final
+</violation>
+<violation beginline="18" endline="18" begincolumn="41" endcolumn="53" rule="UnnecessaryFullyQualifiedName" ruleset="Code Style" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname" priority="4">
+Unnecessary use of fully qualified name 'server.accept' due to existing same package import 'server.*'
+</violation>
+<violation beginline="19" endline="19" begincolumn="25" endcolumn="70" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="Server" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'clientPath' could be declared final
+</violation>
+<violation beginline="20" endline="20" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="21" endline="21" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="22" endline="22" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="23" endline="23" begincolumn="29" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="Server" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'userName' could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="33" endcolumn="50" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="26" endline="26" begincolumn="25" endcolumn="42" rule="SystemPrintln" ruleset="Best Practices" package="server" class="Server" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+</file>
+<file name="/Users/Steve/Desktop/5010/groupProject/Group_Shuaizhen_Nachuan/assignment6/src/main/java/server/ServerProtocol.java">
+<violation beginline="8" endline="8" begincolumn="27" endcolumn="44" rule="LongVariable" ruleset="Code Style" package="server" class="ServerProtocol" variable="DISCONNECT_MESSAGE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like DISCONNECT_MESSAGE
+</violation>
+<violation beginline="9" endline="9" begincolumn="27" endcolumn="47" rule="LongVariable" ruleset="Code Style" package="server" class="ServerProtocol" variable="QUERY_CONNECTED_USERS" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like QUERY_CONNECTED_USERS
+</violation>
+<violation beginline="14" endline="14" begincolumn="27" endcolumn="45" rule="LongVariable" ruleset="Code Style" package="server" class="ServerProtocol" variable="QUERY_USER_RESPONSE" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like QUERY_USER_RESPONSE
+</violation>
+<violation beginline="18" endline="18" begincolumn="15" endcolumn="24" rule="UnusedPrivateField" ruleset="Best Practices" package="server" class="ServerProtocol" variable="identifier" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'identifier'.
+</violation>
+<violation beginline="18" endline="18" begincolumn="15" endcolumn="24" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ServerProtocol" variable="identifier" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="19" endline="19" begincolumn="15" endcolumn="26" rule="UnusedPrivateField" ruleset="Best Practices" package="server" class="ServerProtocol" variable="usernameSize" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'usernameSize'.
+</violation>
+<violation beginline="19" endline="19" begincolumn="15" endcolumn="26" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ServerProtocol" variable="usernameSize" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="25" rule="UnusedPrivateField" ruleset="Best Practices" package="server" class="ServerProtocol" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'username'.
+</violation>
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="server" class="ServerProtocol" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="26" endline="26" begincolumn="25" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="ServerProtocol" variable="identifier" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'identifier' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="59" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="ServerProtocol" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'username' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="41" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="ServerProtocol" variable="usernameSize" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'usernameSize' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="59" endcolumn="73" rule="ArrayIsStoredDirectly" ruleset="Best Practices" package="server" class="ServerProtocol" method="ServerProtocol" variable="username" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#arrayisstoreddirectly" priority="3">
+The user-supplied array 'username' is stored directly.
+</violation>
+<violation beginline="32" endline="32" begincolumn="45" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="processClientMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="5" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="processClientMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="34" endline="36" begincolumn="7" endcolumn="23" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="processClientMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '34'-'36').
+</violation>
+<violation beginline="34" endline="38" begincolumn="7" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="processClientMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '34'-'38').
+</violation>
+<violation beginline="34" endline="44" begincolumn="7" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="processClientMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '34'-'44').
+</violation>
+<violation beginline="34" endline="46" begincolumn="7" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="processClientMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '34'-'46').
+</violation>
+<violation beginline="34" endline="48" begincolumn="7" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="processClientMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'message' (lines '34'-'48').
+</violation>
+<violation beginline="53" endline="53" begincolumn="51" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="54" endline="54" begincolumn="5" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="55" endline="55" begincolumn="5" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'username' could be declared final
+</violation>
+<violation beginline="56" endline="56" begincolumn="19" endcolumn="36" rule="LongVariable" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="disconnectResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like disconnectResponse
+</violation>
+<violation beginline="56" endline="56" begincolumn="5" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'disconnectResponse' could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="7" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="63" endline="63" begincolumn="7" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateDisconnectResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="68" endline="68" begincolumn="5" endcolumn="22" rule="SystemPrintln" ruleset="Best Practices" package="server" class="ServerProtocol" method="generateDisconnectResponse" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="72" endline="72" begincolumn="45" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleBroadcastMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="73" endline="73" begincolumn="5" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleBroadcastMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="74" endline="84" begincolumn="19" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="handleBroadcastMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'message' (lines '74'-'84').
+</violation>
+<violation beginline="74" endline="74" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleBroadcastMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="81" endline="83" begincolumn="10" endcolumn="5" rule="EmptyIfStmt" ruleset="Error Prone" package="server" class="ServerProtocol" method="handleBroadcastMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="87" endline="87" begincolumn="38" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleDmMessage" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="88" endline="88" begincolumn="5" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleDmMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="89" endline="102" begincolumn="19" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="handleDmMessage" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'message' (lines '89'-'102').
+</violation>
+<violation beginline="89" endline="89" begincolumn="5" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="handleDmMessage" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'message' could be declared final
+</violation>
+<violation beginline="90" endline="91" begincolumn="64" endcolumn="34" rule="UselessParentheses" ruleset="Code Style" package="server" class="ServerProtocol" method="handleDmMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="97" endline="99" begincolumn="10" endcolumn="5" rule="EmptyIfStmt" ruleset="Error Prone" package="server" class="ServerProtocol" method="handleDmMessage" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#emptyifstmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="104" endline="110" begincolumn="11" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="generateQueryResponse" variable="entry" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'entry' (lines '104'-'110').
+</violation>
+<violation beginline="104" endline="104" begincolumn="46" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateQueryResponse" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+<violation beginline="105" endline="116" begincolumn="14" endcolumn="43" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="server" class="ServerProtocol" method="generateQueryResponse" variable="lineParts" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'lineParts' (lines '105'-'116').
+</violation>
+<violation beginline="105" endline="105" begincolumn="5" endcolumn="43" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateQueryResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lineParts' could be declared final
+</violation>
+<violation beginline="106" endline="106" begincolumn="5" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateQueryResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'queryResponse' could be declared final
+</violation>
+<violation beginline="109" endline="109" begincolumn="10" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateQueryResponse" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entry' could be declared final
+</violation>
+<violation beginline="119" endline="119" begincolumn="45" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="server" class="ServerProtocol" method="generateInsultResponse" variable="newLine" externalInfoUrl="https://pmd.github.io/pmd-6.17.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'newLine' is not assigned and could be declared final
+</violation>
+</file>
+</pmd>

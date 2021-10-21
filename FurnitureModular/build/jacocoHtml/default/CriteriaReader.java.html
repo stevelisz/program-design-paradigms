@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CriteriaReader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment2</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">CriteriaReader.java</span></div><h1>CriteriaReader.java</h1><pre class="source lang-java linenums">import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+/**
+ * This class represents a criteria reader object which can read criteria.
+ */
+public class CriteriaReader {
+
+  /**
+   * Constructor with no parameters.
+   */
+<span class="fc" id="L17">  public CriteriaReader() {</span>
+<span class="fc" id="L18">  }</span>
+
+  /**
+   * extract criteria from a json file.
+   *
+   * @param filename the name of json file.
+   * @return criteria as JSONObject.
+   */
+  public JSONObject getCriteria(String filename) {
+<span class="fc" id="L27">    JSONParser jsonParser = new JSONParser();</span>
+<span class="fc" id="L28">    JSONObject criteria = new JSONObject();</span>
+<span class="fc" id="L29">    filename = &quot;criteria.json&quot;;</span>
+<span class="fc" id="L30">    try (FileReader reader = new FileReader(filename)) {</span>
+
+<span class="fc" id="L32">      Object obj = jsonParser.parse(reader);</span>
+
+<span class="fc" id="L34">      criteria = (JSONObject) obj;</span>
+
+<span class="nc" id="L36">    } catch (IOException | ParseException e) {</span>
+<span class="nc" id="L37">      e.printStackTrace();</span>
+<span class="fc" id="L38">    }</span>
+<span class="fc" id="L39">    return criteria;</span>
+
+  }
+
+  /**
+   * get desired width of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the desired width.
+   */
+  public Integer getDesiredWidth(JSONObject criteria) {
+
+<span class="fc" id="L51">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L52">    return Integer.parseInt((String) criteria.get(&quot;desiredWidth&quot;));</span>
+
+  }
+
+  /**
+   * get desired height of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the desired height.
+   */
+  public Integer getDesiredHeight(JSONObject criteria) {
+
+<span class="fc" id="L64">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L65">    return Integer.parseInt((String) criteria.get(&quot;desiredHeight&quot;));</span>
+
+  }
+
+  /**
+   * get desired shelf amount of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the desired shelf amount.
+   */
+  public Integer getDesiredShelfAmount(JSONObject criteria) {
+<span class="fc" id="L76">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L77">    return Integer.parseInt((String) criteria.get(&quot;desiredShelfAmount&quot;));</span>
+  }
+
+  /**
+   * get desired drawer amount of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the desired amount.
+   */
+  public Integer getDesiredDrawerAmount(JSONObject criteria) {
+<span class="fc" id="L87">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L88">    return Integer.parseInt((String) criteria.get(&quot;desiredDrawerAmount&quot;));</span>
+  }
+
+  /**
+   * get desired color of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the desired color.
+   */
+  public String getDesiredColor(JSONObject criteria) {
+<span class="fc" id="L98">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L99">    return (String) criteria.get(&quot;desiredColor&quot;);</span>
+  }
+
+  /**
+   * get desired mounting type of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the mounting type.
+   */
+  public Mounting getDesiredMounting(JSONObject criteria) {
+<span class="fc" id="L109">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L110">    String result = (String) criteria.get(&quot;desiredMounting&quot;);</span>
+<span class="pc bpc" id="L111" title="1 of 2 branches missed.">    if (result.equals(&quot;floorOrWall&quot;)) {</span>
+<span class="nc" id="L112">      return Mounting.floorOrWall;</span>
+<span class="pc bpc" id="L113" title="1 of 2 branches missed.">    } else if (result.equals(&quot;floorAndWall&quot;)) {</span>
+<span class="fc" id="L114">      return Mounting.floorAndWall;</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">    } else if (result.equals(&quot;floorOnly&quot;)) {</span>
+<span class="nc" id="L116">      return Mounting.floor;</span>
+    } else {
+<span class="nc" id="L118">      return Mounting.wall;</span>
+    }
+  }
+
+  /**
+   * get desired budget priority of customer.
+   *
+   * @param criteria JSONObject.
+   * @return the budget priority.
+   */
+  public Boolean getBudgetPriority(JSONObject criteria) {
+<span class="fc" id="L129">    criteria = this.getCriteria(&quot;criteria.json&quot;);</span>
+<span class="fc" id="L130">    String result = (String) criteria.get(&quot;budgetPriority&quot;);</span>
+<span class="fc" id="L131">    return result.equals(&quot;true&quot;);</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
